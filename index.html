@@ -1,0 +1,443 @@
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SamuDev — Share & Download</title>
+  <style>
+    :root {
+      --bg1: #0f0c29;
+      --bg2: #302b63;
+      --bg3: #24243e;
+      --accent: #00f2fe;
+      --accent2: #4facfe;
+      --glass: rgba(255, 255, 255, 0.05);
+      --radius: 16px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      margin-bottom: 2rem;
+      opacity: 0.7;
+      font-size: 0.95rem;
+    }
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    .btn-top {
+      position: relative;
+      padding: 0.9rem 1.8rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(45deg, var(--accent), var(--accent2));
+      box-shadow: 0 8px 20px -6px var(--accent);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px -6px var(--accent);
+    }
+    .btn-top.donate {
+      background: linear-gradient(45deg, #f857a6, #ff5858);
+      box-shadow: 0 8px 20px -6px #ff5858;
+    }
+    .btn-top.donate:hover {
+      box-shadow: 0 12px 25px -6px #ff5858;
+    }
+    .notice {
+      max-width: 600px;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .notice b {
+      color: var(--accent);
+    }
+    .notice span {
+      color: #ff4d4d;
+    }
+    .link-list {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .card {
+      background: var(--glass);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.5rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .card:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-4px);
+    }
+    .card-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+    }
+    .card-desc {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-bottom: 1rem;
+    }
+    .card-actions {
+      display: flex;
+      gap: 0.6rem;
+    }
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 0.55rem 0;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+      background: var(--accent);
+      transition: filter 0.2s;
+    }
+    .btn:hover {
+      filter: brightness(1.15);
+    }
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    footer {
+      margin-top: auto;
+      padding-top: 2rem;
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>👻 SamuDev 👻</h1>
+  <p class="subtitle">All Program/Project Samudev code website & script bot — gratis & aman</p>
+
+  <!-- 3 TOMBOL UTAMA -->
+  <div class="btn-group">
+    <a class="btn-top" href="index.html#website">Code Website by SamuDev</a>
+    <a class="btn-top" href="index.html#bot">Script Bot Telegram & WhatsApp by SamuDev</a>
+    <a class="btn-top donate" href="index.html#donate">Bantu Donate</a>
+  </div>
+
+  <!-- Pesan info -->
+  <div class="notice">
+    Semua file di bawah berasal dari <b>SamuDev</b>.  
+    Selain itu <span>SCAM / Penipuan ❌</span>
+  </div>
+
+  <!-- DAFTAR FILE -->
+  <div class="link-list">
+
+    <!-- Website -->
+    <div id="website" class="card">
+      <div class="card-title">Website Payment v1 (ZIP)</div>
+      <div class="card-desc">HTML+CSS, tombol "Lanjut Bayar" dengan lagu. Cocok untuk landing page payment.</div>
+      <div class="card-actions">
+        <a href="file/payment-v1(by%20Reseller%20Gaming).zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/payment-v1(by Reseller Gaming).zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Website Payment v2 (ZIP)</div>
+      <div class="card-desc">All-in-one file, otomatis kirim data & foto ke Bot Telegram.</div>
+      <div class="card-actions">
+        <a href="file/Payment%20Reseller%20Gaming%20(versi%202).zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/Payment Reseller Gaming (versi 2).zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Website Store v1 (ZIP)</div>
+      <div class="card-desc">Full pack: HTML+CSS+JS, tampilan modern & responsif.</div>
+      <div class="card-actions">
+        <a href="file/Website-StoreV1-ResellerGaming.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/Website-StoreV1-ResellerGaming.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Website Store v2 (ZIP)</div>
+      <div class="card-desc">Full pack: HTML+CSS+JS, tampilan nebula SamuDev.</div>
+      <div class="card-actions">
+        <a href="file/WEBSITE%20STORE%20V2.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/WEBSITE STORE V2.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Source  code website to app (ZIP)</div>
+      <div class="card-desc">Tools untuk website menjadi aplikasi</div>
+      <div class="card-actions">
+        <a href="file/webtoapp%20ResellerGaming.html.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/webtoapp ResellerGaming.html.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+    
+<div class="card">
+      <div class="card-title">Website QnA SamuDev V0.1 (ZIP)</div>
+      <div class="card-desc">QnA yang dibuat oleh Samu seperti NGL tapi ini di kaitkan dengan Bot Telegram.</div>
+      <div class="card-actions">
+        <a href="file/QnA%20Reseller%20Gaming.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/QnA Reseller Gaming.zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+<div class="card">
+      <div class="card-title">Website CPANEL V1 (ZIP)</div>
+      <div class="card-desc">souce code create panel pterodactyl yang dibuat otomatis yang dibuat oleh SamuDev.</div>
+      <div class="card-actions">
+        <a href="file/SOURCE%20CODE%20%20CPANEL%20V1%20by%20Reseller%20Gaming.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/SOURCE CODE  CPANEL V2 by Reseller Gaming.zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+<div class="card">
+      <div class="card-title">Website CPANEL V2 (ZIP)</div>
+      <div class="card-desc">souce code create panel pterodactyl yang dibuat otomatis ( harus Login dulu )yang dibuat oleh SamuDev.</div>
+      <div class="card-actions">
+        <a href="file/CPANEL%20V2%20by%20Reseller%20Gaming%20.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/CPANEL V2 by Reseller Gaming .zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+<div class="card">
+      <div class="card-title">Website CPANEL V3 (ZIP)</div>
+      <div class="card-desc">souce code create panel pterodactyl yang dibuat otomatis ( harus Login dulu )yang dibuat oleh SamuDev.</div>
+      <div class="card-actions">
+        <a href="file/CPANEL%20V3%20by%20Reseller%20Gaming%20.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/CPANEL V3 by Reseller Gaming .zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+<div class="card">
+      <div class="card-title">Website Upload to github file zip (ZIP)</div>
+      <div class="card-desc">souce code upload file zip to github</div>
+      <div class="card-actions">
+        <a href="file/UPLOAD%20GITHUB%20V1.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/UPLOAD GITHUB V1.zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+<div class="card">
+      <div class="card-title">Website  IQC IPHONE (ZIP)</div>
+      <div class="card-desc">Source code website IQC IPHONE by ResellerGaming</div>
+      <div class="card-actions">
+        <a href="file/iqc-ip-resellergaming.html.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/iqc-ip-resellergaming.html.zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+<div class="card">
+      <div class="card-title">Website  FAKECALL WA (ZIP)</div>
+      <div class="card-desc">Source code website FAKECALL WA cocok untuk prankby ResellerGaming</div>
+      <div class="card-actions">
+        <a href="file/fakecallresming.html.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/fakecallresming.html.zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+<div class="card">
+      <div class="card-title">Website  GET CODE WEBSITE (ZIP)</div>
+      <div class="card-desc">Source code Website untuk mengambil code dari website tersebut ( hanya mengambil HTML CSS JS) by ResellerGaming</div>
+      <div class="card-actions">
+        <a href="file/SOURCE%20CODE%20GET%20CODE%20by%20ResellerGaming.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/SOURCE CODE GET CODE by ResellerGaming.zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+<div class="card">
+      <div class="card-title">Website  IMAGE EDIT (ZIP)</div>
+      <div class="card-desc">Source code Website Untuk mengubah sebuah foto dengan apa yang diinginkan oleh si pengguna by ResellerGaming</div>
+      <div class="card-actions">
+        <a href="file/IMAGE%20EDIT%20by%20ResellerGaming.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/IMAGE EDIT by ResellerGaming.zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+<div class="card">
+      <div class="card-title">Website  SPAM NGL (ZIP)</div>
+      <div class="card-desc">Source code Website Untuk Spam pesan NGL dengan tujuan target yang ingin di spam by ResellerGaming</div>
+      <div class="card-actions">
+        <a href="file/SOURCE%20CODE%20%20SPAM%20NGL%20by%20ResellerGaming.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/SOURCE CODE  SPAM NGL by ResellerGaming.zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+<div class="card">
+      <div class="card-title">Website  TEKS TO IMAGE (ZIP)</div>
+      <div class="card-desc">Source code Teks menjadi Gambar apa yang ingin ai pengguna inginkan by ResellerGaming</div>
+      <div class="card-actions">
+        <a href="file/SOURCE%20CODE%20TEKS%20TO%20IMG%20by%20ResellerGaming.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/SOURCE CODE TEKS TO IMG by ResellerGaming.zip')">🔗 Salin Link</button>
+      </div>
+</div>
+
+    <!-- Bot -->
+    <div id="bot" class="card">
+      <div class="card-title">Bot Telegram Limit v1 (ZIP)</div>
+      <div class="card-desc">Bot limit-chat: JS + JSON, otomatis blokir user yang spam.</div>
+      <div class="card-actions">
+        <a href="file/BOT%20limit%20V1.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/BOT limit V1.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div id="bot" class="card">
+      <div class="card-title">Bot Telegram Limit v2 (ZIP)</div>
+      <div class="card-desc">Bot limit-chat: JS + JSON, otomatis blokir user yang spam.</div>
+      <div class="card-actions">
+        <a href="file/BOT%20LIMIT%20V2%20RESELLER%20GAMING.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/SOURCE CODE SPAM NGL by ResellerGaming.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Script JASSEB RG v1 (ZIP)</div>
+      <div class="card-desc">Broadcast pesan ke semua grup yang ada di bot—cepat & mudah.</div>
+      <div class="card-actions">
+        <a href="file/JASSEB%20RESELLER%20GAMING%20V1.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/JASSEB RESELLER GAMING V1.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+   <div class="card">
+      <div class="card-title">Script JASSEB RG V1.5 (ZIP)</div>
+      <div class="card-desc">JASSEB PUSH CH & NO ENC 100%.Broadcast pesan ke semua grup yang ada di bot—cepat & mudah.</div>
+      <div class="card-actions">
+        <a href="file/JASSEB%20RESELLER%20GAMING%20V1.5.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/JASSEB RESELLER GAMING V1.5.zip')">🔗 Salin Link</button>
+      </div>
+   </div>
+
+    <div class="card">
+      <div class="card-title">Script JASSEB RG V2 (ZIP)</div>
+      <div class="card-desc">JASSEB PUSH CH 2 & NO ENC 100%.Broadcast pesan ke semua grup yang ada di bot—cepat & mudah.</div>
+      <div class="card-actions">
+        <a href="file/JASSEB%20RESELLER%20GAMING%20V2.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/JASSEB RESELLER GAMING V2.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Script CPANEL V1 RESELLER GAMING (ZIP)</div>
+      <div class="card-desc">Cpanel X buy reseller panel No ENC 100% yang dibuat oleh Reseller Gaming.</div>
+      <div class="card-actions">
+        <a href="file/SC%20CPANEL%20V1%20RESELLER%20GAMING.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/SC CPANEL V1 RESELLER GAMING.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Kumpulan  Script OBF NO ENC and ENC (ZIP)</div>
+      <div class="card-desc">sekumpulan Script OBF untuk enc .JS untuk script agar aman</div>
+      <div class="card-actions">
+        <a href="file/KUMPULAN%20BOT%20OBF.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/KUMPULAN BOT OBF.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Script Deploy menjadi Website V1 (ZIP)</div>
+      <div class="card-desc">Bot telegram untuk deploy code html menjadi Website dengan mudah dan cepat</div>
+      <div class="card-actions">
+        <a href="file/sc%20deploy%20web.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/sc deploy web.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Script Create  Subdomain V1 (ZIP)</div>
+      <div class="card-desc">Bot telegram dan SOURCE CODE untuk membuat subdomain san type A memakai IPv4.</div>
+      <div class="card-actions">
+        <a href="file/CSUBDOMAIN%20V1%20by%20ResellerGaming.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/CSUBDOMAIN V1 by ResellerGaming.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Script Website to app/apk v1</div>
+      <div class="card-desc">Bot telegram  yang akan mengubah website menjadi aplikasi yang dibuat oleh SamuDev.</div>
+      <div class="card-actions">
+        <a href="file/BOT%20WEBSITE%20TO%20APP%20V1%20by%20ResellerGaming.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/BOT WEBSITE TO APP V1 by ResellerGaming.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+    
+    <!-- Lainnya -->
+    <div class="card">
+      <div class="card-title">Website Doxing (ZIP)</div>
+      <div class="card-desc">Cek NIK (contoh demo). <b>Jangan disalahgunakan!</b></div>
+      <div class="card-actions">
+        <a href="file/Doxing.zip" download class="btn">⬇️ Download</a>
+        <button class="btn secondary" onclick="copyLink('/file/Doxing.zip')">🔗 Salin Link</button>
+      </div>
+    </div>
+
+  </div><!-- /link-list -->
+
+  <!-- DONASI (opsional, bisa tautkan ke Saweria, dsb) -->
+  <div id="donate" style="margin-top:3rem;text-align:center;">
+    <p class="subtitle">☕ Dukung  saya agar tetap update dan semangat</p>
+    <a class="btn-top donate" href="https://donate.resellergaming.my.id/#donasi" target="_blank">Lanjut Donate</a>
+  </div>
+
+  <footer>© <span id="yr"></span> SamuDev — DokumenShare</footer>
+
+  <script>
+    // tahun otomatis
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // salin link ke clipboard
+    function copyLink(path) {
+      const url = location.origin + path;
+      navigator.clipboard.writeText(url)
+        .then(() => alert("Link tersalin ke clipboard!"))
+        .catch(() => prompt("Salin manual: ", url));
+    }
+  </script>
+
+</body>
+        </html>
